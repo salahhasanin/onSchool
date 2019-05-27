@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s5">
+             <form #videoform="ngForm" (ngSubmit)="onSubmit(videoform)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="videoservice.selectvideo._id"> 
+              <div class="row">
+                <div class="input-field col s12">
+              <input type="text" name="title"  #title="ngModel" [(ngModel)]="videoservice.selectvideo.title" placeholder="Enter title" required>
+                <label>title :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="url" #url="ngModel" value="John"  [(ngModel)]="videoservice.selectvideo.url" placeholder="{{s}}">
+                  
+                    <label>URL :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="description" #description="ngModel" [(ngModel)]="videoservice.selectvideo.description" placeholder="Enter description">
+                    <label>Description :</label>
+                  </div>
+                </div>
+              <!--    <div class="dropdown">6ic0FN6rT4k
+                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+                    name="createdBy" #createdBy="ngModel" [(ngModel)]="videoservice.selectvideo.createdBy">
+                    createdBy
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" *ngFor="let user of adminservice.user">
+                      <a class="dropdown-item">{{user.fullName}}</a>
+                    </div>
+                  </div>-->
+                  <select style=" width: 15%" name="createdBy" #createdBy="ngModel" [(ngModel)]="videoservice.selectvideo.createdBy">
+                    createdBy:
+                    <option *ngFor="let tech of adminservice.teacher">
+                      {{tech.fullName}}
+                    </option>
+                  </select>
+                  <button class="btn btn-custom right" type="submit" [disabled]="!videoform.valid">Submit</button>
+             </form>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button routerLink='/category'>Category</button>
+<!--
+    <div *ngFor="let s of myData">
+      <input type="submit" value={{s}} name={{s}} (click)="myEvent($event)">
+    </div><br>
+
+    <div *ngFor="let b of teachername">
+{{b.fullName}}
+    </div>  -->

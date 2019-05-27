@@ -1,0 +1,17 @@
+
+<div *ngFor="let vid of video">
+<div>{{vid.title}}</div>
+<!--<div>{{vid.url}}</div>-->
+<div><iframe width="50%" height="400" [src]="vid.url | safe" style="visibility:visible">
+    </iframe></div>
+<div>{{vid.description}}</div>
+<div>{{vid.createdBy}}</div>
+<input type="text" name="comment" required><br>
+<!--<div *ngFor="let use of userDetails">
+    <h1>{{updatevideo}}</h1>
+<input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userDetails._id">-->
+<button  (click)="likeVideo(vid._id,userDetails._id)">Like</button>
+<button  (click)="dislikeVideo(vid._id,userDetails._id)">Dislike</button><br>
+<button  (click)="commentvideo(vid._id,userDetails._id,comment)">Post</button>
+</div>
+

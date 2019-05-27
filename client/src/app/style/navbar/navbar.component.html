@@ -1,0 +1,58 @@
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">OnSchool</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+      </ul>
+    </div>/.nav-collapse 
+  </div>/.container-fluid 
+</nav>
+-->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <nav class="main-navigation">
+        <div class="navbar-header animated fadeInUp">
+            <a class="navbar-brand" href="#"><img src="assets/img/rsz_logo-min.jpg" id="icon" alt="User Icon" /></a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a routerLink="/home"class="nav-link">Home</a>
+            </li>
+            <li class="nav-list-item">
+                    <a routerLink="/category"  class="nav-link">Category</a>
+            </li>
+            <li class="nav-list-item">
+                <a routerLink="/userprofile" class="nav-link">Profile</a>
+            </li>
+            <li class="nav-list-item">
+                <a routerLink="/about" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-list-item">
+                <a routerLink="/contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-list-item">
+                    <input class="z" type="button" (click)="onLogout()" value="Logout" />
+            </li>
+        </ul>
+
+    </nav>

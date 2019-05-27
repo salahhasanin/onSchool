@@ -1,0 +1,23 @@
+{
+  "name": "registeration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "salah",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "loadash": "^1.0.0",
+    "mongoose": "^5.4.9",
+    "node-cron": "^2.0.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
